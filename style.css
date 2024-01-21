@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+
+:root{
+  --Gradient: linear-gradient(hsl(249, 99%, 64%), hsl(278, 94%, 30%));
+  --White: hsl(0, 0%, 100%);
+  --Light-grayish-violet: hsl(270, 3%, 87%);
+  --Dark-grayish-violet: hsl(279, 6%, 55%);
+  --Very-dark-violet: hsl(278, 68%, 11%);
+  --Red: hsl(0, 100%, 66%);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  display: flex;
+  justify-content: end;
+  font-family: 'Space Grotesk', sans-serif;
+  min-height: 100vh;
+  width: 100%;
+  background: url('images/bg-main-desktop.png') no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  min-width: 50%;
+  width: 60%;
+  max-width: 1440px;
+  background-color: var(--White);
+}
+
+.container-item{
+  position: relative;
+  width: 350px;
+  background: transparent;
+}
+
+form input, form button{
+  display: block;
+  width: 100%;
+  height: 40px;
+  border-radius: 7px;
+  border: 1px solid black;
+  padding: 10px;
+
+}
+
+.input-margin{
+  margin-bottom: 40px;
+}
+
+.label{
+  display: block;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+}
+
+.side-labels{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.date-cvv{
+  display: flex;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.date-container{
+  display: flex;
+}
+
+.cvv{
+  margin-left: 10px;
+}
+
+#submit{
+  background-color: var(--Very-dark-violet);
+  color: var(--White);
+}
+
+.cards{
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  position: absolute;
+  top: 50%;
+  left: -100%;
+  transform: translateY(-50%);
+}
+
+.card-front{
+  display: block;
+  position: relative;
+  right: 80%;
+  height: 200px;
+  width: calc(1.6 * 200px);
+  background-image: url('images/bg-card-front.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  color: var(--White);
+}
+
+
+.card-number{
+  position: absolute;
+  top: 60%;
+  left: 20px;
+  font-size: 1.25rem;
+}
+
+.card-name{
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+.card-date{
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+} 
+
+.card-back{
+  display: block;
+  position: relative;
+  height: 200px;
+  width: calc(1.6 * 200px);
+  background-image: url('images/bg-card-back.png');
+  background-size: cover;
+  left: -50%;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+
+.cvv-number{
+  position: absolute;
+  top: 84px;
+  right: 20px;
+  font-size: 1.25rem;
+  color: var(--White)
+}
+
+.done-message{text-align: center}
+
+.done-message img{margin-bottom: 30px;}
+
+.done-message h1{
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: var();
+}
+
+.done-message p{
+  font-size: 1rem;
+  margin-bottom: 50px;
+  color: var(--Dark-grayish-violet);
+}
+
+.done-message button{
+  width: 100%;
+  height: 40px;
+  background-color: var(--Very-dark-violet);
+  color: var(--White);
+  border-radius: 10px;
+}
+
+.error{
+  color: var(--Red);
+}
+
+.hidden{
+  display: none;
+}
+

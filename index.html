@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+</head>
+<body>
+
+  <div class="container">
+    <form class="container-item"">
+      <div class="cards">
+        <div class="card-front">
+          <span class="card-number">
+            0000 0000 0000 0000
+          </span>
+          <span class="card-name">
+            FELICIA LEIRE
+          </span>
+          <span class="card-date">
+            <span></span>
+            <span></span>
+          </span>
+        </div>
+        <div class="card-back">
+          <span class="cvv-number">000</span>
+        </div>
+      </div>
+      <div>
+        <label class="label">Cardholder Name</label>
+        <input id="name" class="input-margin" type="text" placeholder="Name">
+        <label class="error name-error">
+          
+        </label>
+      </div>
+      <label class="label">Card Number</label>
+      <input id="number" class="input-margin" type="text" placeholder="0000 0000 0000 0000">
+      <div>
+        <label class="side-labels">
+          <span>MM/YY</span>
+          <span>CVC</span>
+        </label>
+        <div class="date-cvv">
+          <div class="date-container">
+            <input id="month" type="number" placeholder="MM">
+            <input id="year" type="number" placeholder="YY">
+          </div>
+          <input id="cvv" type="text" placeholder="CVV">
+        </div>
+
+      </div>
+      <input id="submit" type="submit" value="Confirm">
+    </form>
+    <div class="container-item hidden">
+      <img src="images/icon-complete.svg" alt="">
+      <h1>Thank You!</h1>
+      <p>We've added your card details.'</p>
+      <button class="submit">
+        Continue
+      </button>
+    </div>
+  </div>
+
+
+
+  <script src="app.js"></script>
+</body>
+</html>
