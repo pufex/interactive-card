@@ -28,10 +28,11 @@ body{
 }
 
 .container{
+  /* position: relative; */
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
   min-width: 50%;
   width: 60%;
   max-width: 1440px;
@@ -54,8 +55,13 @@ form input, form button{
 
 }
 
-.input-margin{
+/* .input-margin{
   margin-bottom: 40px;
+} */
+
+.labels{
+  position: relative;
+  margin-bottom: 30px;
 }
 
 .label{
@@ -71,13 +77,16 @@ form input, form button{
 }
 
 .date-cvv{
+  position: relative;
   display: flex;
   gap: 15px;
-  margin-bottom: 40px;
+  margin-bottom: 70px;
 }
 
 .date-container{
+  position: relative;
   display: flex;
+  gap: 10px;
 }
 
 .cvv{
@@ -95,14 +104,15 @@ form input, form button{
   gap: 30px;
   position: absolute;
   top: 50%;
-  left: -100%;
+  width: auto;
+  left: 20px;
   transform: translateY(-50%);
 }
 
 .card-front{
   display: block;
   position: relative;
-  right: 80%;
+  /* right: 25%; */
   height: 200px;
   width: calc(1.6 * 200px);
   background-image: url('images/bg-card-front.png');
@@ -121,6 +131,7 @@ form input, form button{
 }
 
 .card-name{
+  text-transform: capitalize;
   position: absolute;
   bottom: 20px;
   left: 20px;
@@ -139,12 +150,12 @@ form input, form button{
   width: calc(1.6 * 200px);
   background-image: url('images/bg-card-back.png');
   background-size: cover;
-  left: -50%;
+  /* right: 50%; */
   background-repeat: no-repeat;
   border-radius: 10px;
 }
 
-.cvv-number{
+.card-cvv{
   position: absolute;
   top: 84px;
   right: 20px;
@@ -177,10 +188,51 @@ form input, form button{
 }
 
 .error{
+  position: absolute;
+  top: 100%;
   color: var(--Red);
+}
+
+.error-container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.error-container *{
+  position: relative;
+  top: -70px;
+  height: 1rem;
 }
 
 .hidden{
   display: none;
+}
+
+@media (max-width: 750px){
+  .container{
+    width: 100%;
+    flex-direction: column;
+    padding: 120px 0;
+  }
+
+  .cards{
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    height: auto;
+    margin-bottom: 100px;
+  }
+
+  .card-front{
+    position: relative;
+    top:0;
+    right: 0;
+  }
+  .card-back{
+    position: relative;
+    top:0;
+    right: 0;
+  }
 }
 
