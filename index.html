@@ -14,33 +14,48 @@
 <body>
 
   <div class="container">
-    <form class="container-item"">
-      <div class="cards">
-        <div class="card-front">
-          <span class="card-number">
-            0000 0000 0000 0000
-          </span>
-          <span class="card-name">
-            FELICIA LEIRE
-          </span>
-          <span class="card-date">
-            <span></span>
-            <span></span>
-          </span>
-        </div>
-        <div class="card-back">
-          <span class="cvv-number">000</span>
-        </div>
+    <div class="cards">
+      <div class="card-front">
+        <span class="card-number">
+          0000 0000 0000 0000
+        </span>
+        <span class="card-name">
+          FELICIA LEIRE
+        </span>
+        <span class="card-date">
+          <span class="card-month">00</span>/
+          <span class="card-year">00</span>
+        </span>
       </div>
-      <div>
+      <div class="card-back">
+        <span class="card-cvv">000</span>
+      </div>
+    </div>
+    <form class="container-item">
+      <div class="labels">
         <label class="label">Cardholder Name</label>
-        <input id="name" class="input-margin" type="text" placeholder="Name">
+        <input 
+        id="name" 
+        class="input-margin" type="text" 
+        placeholder="Name"
+        value=""
+        >
         <label class="error name-error">
           
         </label>
       </div>
-      <label class="label">Card Number</label>
-      <input id="number" class="input-margin" type="text" placeholder="0000 0000 0000 0000">
+      <div class="labels">
+        <label class="label">Card Number</label>
+        <input 
+        id="number" 
+        class="input-margin" 
+        type="text" 
+        placeholder="0000 0000 0000 0000"
+        value="">
+        <label class="error card-error">
+          
+        </label>
+      </div>
       <div>
         <label class="side-labels">
           <span>MM/YY</span>
@@ -48,20 +63,35 @@
         </label>
         <div class="date-cvv">
           <div class="date-container">
-            <input id="month" type="number" placeholder="MM">
-            <input id="year" type="number" placeholder="YY">
+            <input 
+            id="month" 
+            type="number" 
+            placeholder="MM" value="">
+            
+            <input 
+            id="year" 
+            type="number" 
+            placeholder="YY"
+            value=""
+            >
+            
           </div>
-          <input id="cvv" type="text" placeholder="CVV">
+          <input id="cvv" type="text" placeholder="CVV" value="">
+          
+        </div>
+        <div class="error-container">
+          <label class="date-error error"></label>
+          <label class="cvv-error error" for=""></label>
         </div>
 
       </div>
       <input id="submit" type="submit" value="Confirm">
     </form>
-    <div class="container-item hidden">
+    <div class="done-message container-item hidden">
       <img src="images/icon-complete.svg" alt="">
       <h1>Thank You!</h1>
       <p>We've added your card details.'</p>
-      <button class="submit">
+      <button id="continue" class="submit">
         Continue
       </button>
     </div>
